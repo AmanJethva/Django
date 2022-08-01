@@ -1,0 +1,361 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel ="stylesheet" href ="{% static 'product.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Serif:wght@400;700&family=Oswald:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logoname"><h2>Flex</h2></div>
+            <div class="logo"> 
+                <img src="{% static 'images/Vector.png' %}" alt="">
+            </div>
+            <div class="logo1">
+                <img src="{% static 'images/Vector (1).png' %}" alt="">
+            </div>
+            <div class="logo2">
+                <img src="{% static 'images/Vector (2).png' %}" alt="">
+            </div>
+            
+            <div class="category">
+                <a href="{% url 'product' %}"><div class="Product">Product</div></a>
+                <a href="{% url 'feed' %}"><div class="Product">Fetures</div></a>
+                <a href=""><div class="Product">Pricing</div></a>
+                <a href=""><div class="Product">Resources</div></a>
+                <input class="search" placeholder="search">
+                </div>
+                <a href="{% url 'registration' %}"><div class="login">Login</div></a>
+                <a href="{% url 'registration' %}"><div class="btn1"><div class="btn_text">Sign Up</div></div></a>
+            </div>
+    </div>
+    <div class="sort"><div class="sortby_text"><dropdown>High to Low</dropdown></div>
+        <div class="sortby"><img src="{% static 'images/sortby.png' %}"></div>
+    </div><a href="">
+    <div class="options">
+        <div class="showall">
+            &nbsp;&nbsp;show all
+        </div>
+        <div class="auction">
+            &nbsp;&nbsp;&nbsp;Auction
+        </div>
+        <div class="buynow">
+            &nbsp;&nbsp;Buy now
+        </div>
+    </div></a>
+    <div class="cart">
+        <div class="carttext">My cart</div>
+    </div>
+
+    <div class="departments">
+        <div class="departments_logo">
+            <img src="{% static 'images/Vectorlogo.png' %}">
+        </div>
+        <div class="departments_text">Departments</div>
+    </div>
+
+
+
+    <div class="sidenav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
+        <button class="dropdown-btn">Dropdown 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <a href="#contact">Search</a>
+      </div>
+      <script> 
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+        </script>
+
+
+
+    <div class="category_products">
+        <div class="vec"><img src="{% static 'images/Vec1.png' %}"></div>
+        <div class="cat_text"><b>All Categories</b></div>
+    </div>
+        <div class="more"><img src="{% static 'images/Icon BG.png' %}"></div>
+        <div class="sub">Ecommerce patterns</div>
+    </div>
+    <div class="electronics">
+        <div class="elec_text">Electronics
+         <div class="cellphones">
+             <div class="cellphones_text">Cell phones & smartphones</div>
+             <div class="cell_phone_ae">Cell phones Aeccessories</div>
+             <div class="cell_phone_gad_box">Cell phones Gatgets</div>
+             <div class="applications_box">Applications</div>
+             <div class="watches_box">Smart Watches</div>
+
+        </div>       
+        </div>
+    </div>
+    <div class="showmore_options">
+        <div class="showmore_text">Show more</div>
+    </div>
+    <div class="business">Business & Industrial</div>
+    <div class="computers">Computers</div>
+    <div class="consumer">Consumer Electronics</div>
+    <div class="home">Home & Gardern</div>
+    <div class="collectibles">Collectibles</div>
+    <div class="expand_btn"><div class="expand_text">Expand</div></div>
+    <div class="collapsed_filter"><div class="collapsed_text">Collapsed Filters</div></div>
+
+    <div class="filter_container">
+        <div class="filter_text">Expand Filters<div class=""></div><br><br>
+        <input type="checkbox" class="remember" id="remember" name="remember" value="remember">
+        <label for="remember" class="filter_container_text"> Recommended</label><br><br>
+        <input type="checkbox" class="remember" id="remember" name="remember" value="remember">
+        <label for="remember" class="filter_container_text"> Recently Added</label><br><br>
+        <input type="checkbox" class="remember" id="remember" name="remember" value="remember">
+        <label for="remember" class="filter_container_text"> Expiring Soon</label><br><br>
+        <input type="checkbox" class="remember" id="remember" name="remember" value="remember">
+        <label for="remember" class="filter_container_text"> Most Rated</label><br><br>
+        <input type="checkbox" class="remember" id="remember" name="remember" value="remember">
+        <label for="remember" class="filter_container_text"> Price: Low to High</label><br><br>
+        <input type="checkbox" class="remember" id="remember" name="remember" value="remember">
+        <label for="remember" class="filter_container_text"> Price: High to Low</label><br><br>
+    </div>
+    <div class="year_container">
+        <div class="year_text">Yeat of Manufacturing</div><br><br>
+        <input type="checkbox" class="remember" id="remember" name="remember" value="remember">
+        <label for="remember" class="remember_text"> 1954</label><br><br>
+        <input type="checkbox" class="remember" id="remember" name="remember" value="remember">
+        <label for="remember" class="remember_text"> 1955</label><br><br>
+        <input type="checkbox" class="remember" id="remember" name="remember" value="remember">
+        <label for="remember" class="remember_text"> 1956</label><br><br>
+        <input type="checkbox" class="remember" id="remember" name="remember" value="remember">
+        <label for="remember" class="remember_text"> 1957</label><br><br>
+        <input type="checkbox" class="remember" id="remember" name="remember" value="remember">
+        <label for="remember" class="remember_text"> 1958</label><br><br>
+        <input type="checkbox" class="remember" id="remember" name="remember" value="remember">
+        <label for="remember" class="remember_text"> 1959</label><br> <br>
+        <input type="checkbox" class="remember" id="remember" name="remember" value="remember">
+        <label for="remember" class="remember_text"> 1960</label><br> <br>
+        <input type="checkbox" class="remember" id="remember" name="remember" value="remember">
+        <label for="remember" class="remember_text"> 1961</label><br> <br>
+        <input type="checkbox" class="remember" id="remember" name="remember" value="remember">
+        <label for="remember" class="remember_text"> 1962-2020</label><br><br> 
+    </div>
+
+    <div class="product_container">
+        <div class="products">
+            <div class="offer">
+                <div class="offer_text"><img src="{% static 'images/Caption.png' %}"></div>
+            </div>
+            <img src="{% static 'images/Image.png' %}">
+            <div class="rating1"><img src="{% static 'images/star.png' %}"></div>
+            <div class="rating2"><img src="{% static 'images/star.png' %}"></div>
+            <div class="rating3"><img src="{% static 'images/star.png' %}"></div>
+            <div class="rating4"><img src="{% static 'images/star.png' %}"></div>
+            <div class="rating5"><img src="{% static 'images/star.png' %}"></div>
+            <div class="rating_text">5</div>
+            <div class="price">$13.95</div>
+            <div class="product_details"><b>Lee pucker design.UI staminia shoes for handsome<br>designers. Worldwide shipping. Brown theme<br>
+            leather.</b>
+            </div>
+            <a href="#">
+            <div class="remove">Remove</div>
+            <div class="roundplus">
+                <img src="{% static 'images/roundplus.png' %}">
+                <div class="plus">
+                    <img src="{% static 'images/plus.png' %}">
+                </div>
+            </div>
+            <div class="save">
+                <div class="save_logo"><img src="{% static 'images/save.png' %}"></div>
+                <div class="save_text">Save for later</div>
+            </div>
+            </a>
+            <a href="">
+            <div class="roundminus">
+                <img src="{% static 'images/roundminus.png' %}">
+                <div class="minus">
+                    <img src="{% static 'images/minus.png' %}">
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
+    <div class="product1_container">
+        <div class="products1">
+            <div class="offer1">
+                <div class="offer_text1"><img src="{% static 'images/Caption.png' %}"></div>
+            </div>
+            <img src="{% static 'images/Image.png' %}">
+            <div class="ratinga"><img src="{% static 'images/star.png' %}"></div>
+            <div class="ratingb"><img src="{% static 'images/star.png' %}"></div>
+            <div class="ratingc"><img src="{% static 'images/star.png' %}"></div>
+            <div class="ratingd"><img src="{% static 'images/star.png' %}"></div>
+            <div class="ratinge"><img src="{% static 'images/star.png' %}"></div>
+            <div class="rating_text1">5</div>
+            <div class="price1">$13.95</div>
+            <div class="product_details1"><b>Lee pucker design.UI staminia shoes for handsome<br>designers. Worldwide shipping. Brown theme<br>
+            leather.</b>
+            </div>
+            <a href="#">
+                <div class="remove1">Remove</div>
+                <div class="roundplus1">
+                    <img src="{% static 'images/roundplus.png' %}">
+                    <div class="plus1">
+                        <img src="{% static 'images/plus.png' %}">
+                    </div>
+                </div></a>
+                <a href="">
+                <div class="roundminus1">
+                    <img src="{% static 'images/roundminus.png' %}">
+                    <div class="minus1">
+                        <img src="{% static 'images/minus.png' %}">
+                    </div>
+                </div>
+                <div class="save1">
+                    <div class="save_logo1"><img src="{% static 'images/save.png' %}"></div>
+                    <div class="save_text1">Save for later</div>
+                </div>
+                </a>
+        </div>
+    </div>
+    <div class="image">
+        <img src="{% static 'images/Rectangle 2.png' %}">
+    </div>
+    <div class="product2_container">
+        <div class="products2">
+            <div class="offer2">
+                <div class="offer_text2"><img src="{% static 'images/Caption.png' %}"></div>
+            </div>
+            <img src="{% static 'images/Image.png' %}">
+            <div class="ratinga1"><img src="{% static 'images/star.png' %}"></div>
+            <div class="ratingb2"><img src="{% static 'images/star.png' %}"></div>
+            <div class="ratingc3"><img src="{% static 'images/star.png' %}"></div>
+            <div class="ratingd4"><img src="{% static 'images/star.png' %}"></div>
+            <div class="ratinge5"><img src="{% static 'images/star.png' %}"></div>
+            <div class="rating_text2">5</div>
+            <div class="price2">$13.95</div>
+            <div class="product_details2"><b>Lee pucker design.UI staminia shoes for handsome<br>designers. Worldwide shipping. Brown theme<br>
+            leather.</b>
+            </div>
+            <a href="#">
+                <div class="remove2">Remove</div>
+                <div class="roundplus2">
+                    <img src="{% static 'images/roundplus.png' %}">
+                    <div class="plus2">
+                        <img src="{% static 'images/plus.png' %}">
+                    </div>
+                </div></a>
+                <a href="">
+                <div class="roundminus2">
+                    <img src="{% static 'images/roundminus.png' %}">
+                    <div class="minus2">
+                        <img src="{% static 'images/minus.png' %}">
+                    </div>
+                </div>
+                <div class="save2">
+                    <div class="save_logo2"><img src="{% static 'images/save.png' %}"></div>
+                    <div class="save_text2">Save for later</div>
+                </div>
+                </a>
+        </div>
+    </div>
+    <div class="product3_container">
+        <div class="products3">
+            <div class="offer3">
+                <div class="offer_text3"><img src="{% static 'images/Caption.png' %}"></div>
+            </div>
+            <img src="{% static 'images/Image.png' %}">
+            <div class="ratingaa"><img src="{% static 'images/star.png' %}"></div>
+            <div class="ratingbb"><img src="{% static 'images/star.png' %}"></div>
+            <div class="ratingcc"><img src="{% static 'images/star.png' %}"></div>
+            <div class="ratingdd"><img src="{% static 'images/star.png' %}"></div>
+            <div class="ratingee"><img src="{% static 'images/star.png' %}"></div>
+            <div class="rating_text3">5</div>
+            <div class="price3">$13.95</div>
+            <div class="product_details3"><b>Lee pucker design.UI staminia shoes for handsome<br>designers. Worldwide shipping. Brown theme<br>
+            leather.</b>
+            </div>
+            <a href="#">
+                <div class="remove3">Remove</div>
+                <div class="roundplus3">
+                    <img src="{% static 'images/roundplus.png' %}">
+                    <div class="plus3">
+                        <img src="{% static 'images/plus.png' %}">
+                    </div>
+                </div>
+                <div class="save3">
+                    <div class="save_logo3"><img src="{% static 'images/save.png' %}"></div>
+                    <div class="save_text3">Save for later</div>
+                </div>
+                </a>
+                <a href="">
+                <div class="roundminus3">
+                    <img src="{% static 'images/roundminus.png' %}">
+                    <div class="minus3">
+                        <img src="{% static 'images/minus.png' %}">
+                    </div>
+                </div>
+                </a>
+        </div>
+        <div class="slidebox"><a href="">
+            <div class="leftslide"> < </div>
+            <div class="slide1">1</div>
+            <div class="slide2">2</div>
+            <div class="slide3">3</div>
+            <div class="slide4">4</div>
+            <div class="slide5">5</div>
+            <div class="rightslide"> > </div></a>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="footer_logoname"><h2>Flex</h2></div>
+            <div class="footer_logo"> 
+                <img src="{% static 'images/Vector.png' %}" alt="">
+            </div>
+            <div class="footer_logo1">
+                <img src="{% static 'images/Vector (1).png' %}" alt="">
+            </div>
+            <div class="footer_logo2">
+                <img src="{% static 'images/Vector (2).png' %}" alt="">
+            </div>
+            
+            <div class="footer_category">
+                <a href=""><div class="footer_Product">Product</div></a>
+                <a href=""><div class="footer_Fetures">Fetures</div></a>
+                <a href=""><div class="footer_Pricing">Pricing</div></a>
+                <a href=""><div class="footer_Resources">Resources</div></a>
+                <a href=""><div class="footer_Career">Career</div></a>
+                <a href=""><div class="footer_Help">Help</div></a>
+                <a href=""><div class="footer_Privacy">Privacy</div></a>
+            </div>
+        </div>
+        <div class="footerline"></div>
+        <div class="rights">&#169;2021 Flex.All rights reserved</div>
+    </div>
+</body>
+</html>

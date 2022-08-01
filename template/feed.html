@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    <link rel ="stylesheet" href ="{% static 'feed.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Serif:wght@400;700&family=Oswald:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logoname"><h2>Flex</h2></div>
+            <div class="logo"> 
+                <img src="{% static 'images/Vector.png' %}" alt="">
+            </div>
+            <div class="logo1">
+                <img src="{% static 'images/Vector (1).png' %}" alt="">
+            </div>
+            <div class="logo2">
+                <img src="{% static 'images/Vector (2).png' %}" alt="">
+            </div>
+            
+            <div class="category">
+                <a href="{% url 'product' %}"><div class="Product">Product</div></a>
+                <a href="{% url 'feed' %}"><div class="Product">Fetures</div></a>
+                <a href=""><div class="Product">Pricing</div></a>
+                <a href=""><div class="Product">Resources</div></a>
+                <input class="search" placeholder="search">
+                </div>
+                <a href="{% url 'registration' %}"><div class="login">Login</div></a>
+                <a href="{% url 'registration' %}"><div class="btn1"><div class="btn_text">Sign Up</div></div></a>
+            </div>
+    </div>
+
+    <div class="backimage"><img src="{% static 'images/backimage.png' %}"></div>
+    <div class="faceimage"><img src="{% static 'images/face.png' %}"></div>
+    <div class="founder_name">Macauley Herring</div>
+    <div class="founder_text">CEO & Founder</div>
+    <div class="company_details">With a single point of view, Flex <br>integrates customer data and<br>marketing tools in one flexible cloud<br>
+    platform that lets you get business<br> result wherever they show up. Flex is <br> the only saas business platform that<br> lets you run 
+    your business in one <br> platform, seamlessly acroas all digital <br> channles.</div>
+    <div class="project_number">235.000</div>
+    <div class="project_text">Projects completed</div>
+    <div class="m">$10m</div>
+    <div class="apr">APR</div>
+    <div class="hours">+50.000</div>
+    <div class="hours_text">Hours Saved manually</div>
+    <div class="unicorns">3.500</div>
+    <div class="unicorns_text">Unicorns</div>
+
+    <div class="allcategories">
+        <a href=""><div class="categories_text">All Categories</div></a>
+        <a href=""><div class="technology">Technology</div></a>
+        <a href=""><div class="development">Development</div></a>
+        <a href=""><div class="marketing">Marketing</div></a>
+        <a href=""><div class="startup">Start-Up</div></a>
+    </div>
+    <div class="image1">
+        <img src="{% static 'images/Rectangle 18.png' %}">
+    </div>
+    <div class="technology_box">&nbsp;&nbsp;Technology</div>
+    <div class="date">John Doe 19 jan 2022</div>
+    <div class="title">A small business is only as good as its tools and it is <br> totally true.</div>
+    <div class="small_title">We've all exeperience the chaos of multiple spredsheets, traking and <br> insights tools, and scrambling for 
+    the right data and right time.</div>
+    <a href=""><div class="readmore">&nbsp;&nbsp;Read Post</div></a>
+    <div class="image2">
+        <img src="{% static 'images/Rectangle 19.jpg' %}">
+    </div>
+    <div class="date1">John Doe 19 jan 2022</div>
+    <div class="title1">A small business is only as good as its tools and it is <br> totally true.</div>
+    <div class="small_title1">We've all exeperience the chaos of multiple spredsheets, traking and <br> insights tools, and scrambling for 
+    the right data and right time.</div>
+
+
+    <div class="footer">
+        <div class="footer_logoname"><h2>Flex</h2></div>
+            <div class="footer_logo"> 
+                <img src="{% static 'images/Vector.png' %}" alt="">
+            </div>
+            <div class="footer_logo1">
+                <img src="{% static 'images/Vector (1).png' %}" alt="">
+            </div>
+            <div class="footer_logo2">
+                <img src="{% static 'images/Vector (2).png' %}" alt="">
+            </div>
+            
+            <div class="footer_category">
+                <a href="{% url 'product' %}"><div class="footer_Product">Product</div></a>
+                <a href="{% url 'feed' %}"><div class="footer_Fetures">Fetures</div></a>
+                <a href=""><div class="footer_Pricing">Pricing</div></a>
+                <a href=""><div class="footer_Resources">Resources</div></a>
+                <a href=""><div class="footer_Career">Career</div></a>
+                <a href=""><div class="footer_Help">Help</div></a>
+                <a href=""><div class="footer_Privacy">Privacy</div></a>
+            </div>
+        </div>
+        <div class="footerline"></div>
+        <div class="rights">&#169;2021 Flex.All rights reserved</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel ="stylesheet" href ="{% static 'registration.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Serif:wght@400;700&family=Oswald:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logoname"><h2>Flex</h2></div>
+            <div class="logo"> 
+                <img src="{% static 'images/Vector.png' %}" alt="">
+            </div>
+            <div class="logo1">
+                <img src="{% static 'images/Vector (1).png' %}" alt="">
+            </div>
+            <div class="logo2">
+                <img src="{% static 'images/Vector (2).png' %}" alt="">
+            </div>
+            
+            <div class="category">
+                <a href="{% url 'product' %}"><div class="Product">Product</div></a>
+                <a href=""><div class="Product">Fetures</div></a>
+                <a href=""><div class="Product">Pricing</div></a>
+                <a href=""><div class="Product">Resources</div></a>
+                <input class="search" placeholder="search">
+                </div>
+                <a href="{% url 'registration' %}"><div class="login">Login</div></a>
+                <a href="{% url 'signup' %}"><div class="btn1"><div class="btn_text">Sign Up</div></div></a>
+            </div>
+    </div>
+
+    <div class="logo_container">
+        <div class="logor"> 
+            <img src="{% static 'images/Vector.png' %}" alt="">
+        </div>
+        <div class="logo1r">
+            <img src="{% static 'images/Vector (1).png' %}" alt="">
+        </div>
+        <div class="logo2r">
+            <img src="{% static 'images/Vector (2).png' %}" alt="">
+        </div>
+    </div>
+
+    <div class="heading">
+        Sign in to your account
+        <div class="smalltext">Start your demo version</div>
+    </div>
+
+    <form action="/registration" method="POST">
+        {% csrf_token %}
+        {% comment %} {% form fm in form %}
+        <div class= "form-group">
+            {{fm.lable_tag}} {{fm}} {{fm.errors|striptags}}</div>
+        {% endfor %} {% endcomment %}
+        <div class="email"><label for ="email">Email</label></div>
+        <input type="email" class="search_text_email" id="email" name="email" aria-describedby="emailHelp">
+
+        <div class="password"><label for="password">Password</label></div>
+        <input type="password" class="search_text_password" id="password" name="password">
+
+        <a href=""><button class="form_signin">Sign in</button></a>
+
+    </form>
+        <a href="{% url 'signup' %}"><div class="account">Don't have an account? sign up</div></a>
+        <a href=""><input type="checkbox" class="remember" id="remember" name="remember" value="remember">
+        <label for="remember" class="remember_text"> Remember me</label><br></a>
+        <a href=""><div class="forgot">Forgot your password?</div></a>
+    <div class="container">
+        <div class="container_text">
+            Love is simplicity of the service<br>and the prompt customer support.<br>
+            we can't imagine wirking without it.
+        </div>
+        <div class="container_image">
+            <img src="{% static 'images/face.png' %}">
+        </div>
+        <div class="container_image_name">John Doe
+            <div class="container_image_smalltext">CEO & Founder at Flex.co
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+    <div class="numbers"><h6>Numbres</h6></div>
+    <div class="container_context">
+        We believe in the power of data
+        <div class="container_context_smalltext">Flex is the only business platform that let's you run your business on one platform<br>
+        seamlessly across all digital channles.
+        </div>
+        <div class="project_numbers">235.00
+            <div class="project_text">Project completed</div>
+        </div>
+        <div class="project1">$10m
+            <div class="project1_text">APR</div>
+        </div>
+        <div class="project_hours">+50.000
+            <div class="projetc_hours_text">Hours saved Annually</div>
+        </div>
+        <div class="project_users">3.500
+            <div class="project_uniqueusers">Unique Users</div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_logoname"><h2>Flex</h2></div>
+            <div class="footer_logo"> 
+                <img src="{% static 'images/Vector.png' %}" alt="">
+            </div>
+            <div class="footer_logo1">
+                <img src="{% static 'images/Vector (1).png' %}" alt="">
+            </div>
+            <div class="footer_logo2">
+                <img src="{% static 'images/Vector (2).png' %}" alt="">
+            </div>
+            
+            <div class="footer_category">
+                <a href=""><div class="footer_Product">Product</div></a>
+                <a href=""><div class="footer_Fetures">Fetures</div></a>
+                <a href=""><div class="footer_Pricing">Pricing</div></a>
+                <a href=""><div class="footer_Resources">Resources</div></a>
+                <a href=""><div class="footer_Career">Career</div></a>
+                <a href=""><div class="footer_Help">Help</div></a>
+                <a href=""><div class="footer_Privacy">Privacy</div></a>
+            </div>
+        </div>
+        <div class="footerline"></div>
+        <div class="rights">&#169;2021 Flex.All rights reserved</div>
+    </div>
+</body>
+</html>

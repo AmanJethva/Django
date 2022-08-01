@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <link rel ="stylesheet" href ="{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Serif:wght@400;700&family=Oswald:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <div class="navbar">
+        <div class="logoname"><h2>Flex</h2></div>
+            <div class="logo"> 
+                <img src="{% static 'images/Vector.png' %}" alt="">
+            </div>
+            <div class="logo1">
+                <img src="{% static 'images/Vector (1).png' %}" alt="">
+            </div>
+            <div class="logo2">
+                <img src="{% static 'images/Vector (2).png' %}" alt="">
+            </div>
+            
+            <div class="category">
+                <a href="{% url 'product' %}"><div class="Product">Product</div></a>
+                <a href="{% url 'feed' %}"><div class="Product">Fetures</div></a>
+                <a href=""><div class="Product">Pricing</div></a>
+                <a href=""><div class="Product">Resources</div></a>
+                <input class="search" placeholder="search">
+                </div>
+                <a href="{% url 'registration' %}"><div class="login">Login</div></a>
+                <a href="{% url 'registration' %}"><div class="btn1"><div class="btn_text">Sign Up</div></div></a>
+            </div>
+    </div>
+   
+    <div class="image">
+        <img src="{% static 'images/1.png' %}">
+    </div>
+
+    <div class="heading">
+        <h3>A small business is only <br> as good as its tools.</h3>
+    </div>
+
+    <div class="small_text">
+        <h4>We're different. Flex is the only saas business platform that lets you run <br> 
+            your business on one platform, seamlessly across all digital channles.</h4>
+    </div>
+
+    <a href="{% url 'registration' %}"><div class="btn">
+        Sign Up</div>
+    </a>
+
+    <div class="images">
+        <img src="{% static 'images/2.png' %}">
+    </div>
+
+    <div class="container">
+        <div class="rec_email">
+            {% comment %} <div class="email_image"><img src="{% static 'images/' %}"> {% endcomment %}
+            <div class="rec_text">
+                C2C Business
+                <h6>Stay conected with your team and <br> make quick dicisions wherever <br>you are.</h6>
+            </div>
+        </div>
+        <div class="contact">
+            {% comment %} <div class="contact_image"><img src="{% static 'images/' %}"> {% endcomment %}
+            <div class="rec_text2">
+                B2B Business
+                <h6>Our calendar lets you know what is <br>happenning with customer and<br> projects so you </h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="pattern">
+        <div class="pattern_image">
+            <img src="{% static 'images/pat.png' %}">
+        </div>
+        <div class="pattern_text">
+        The fastest way from <br> idea to live site. period.
+        </div>
+        <div class="pattern_small_text">
+            Flex is a small saas business. Flex isn't a <br> traditional company.
+        </div>
+    </div>
+
+    <div class="container1">
+        <div class="get_started">
+            <a href="">
+            <div class="get_started_text">Get started</div>
+            </a>
+        </div>
+        <div class="container1_text">
+            The fastest way from idea to live site. period
+        </div>
+        <div class="container1_small_text">
+            Flex is a small saas business. Flex isn't a traditional company.<br>
+            We belive a diverse team, approaches to work and transparency are key to our succsess.
+        </div><a href="">
+        <div class="get_started_btn">
+            Get started
+        </div></a>
+        <div class="container1_image">
+            <img src="{% static 'images/Rectangle 2.png' %}">
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer_logoname"><h2>Flex</h2></div>
+            <div class="footer_logo"> 
+                <img src="{% static 'images/Vector.png' %}" alt="">
+            </div>
+            <div class="footer_logo1">
+                <img src="{% static 'images/Vector (1).png' %}" alt="">
+            </div>
+            <div class="footer_logo2">
+                <img src="{% static 'images/Vector (2).png' %}" alt="">
+            </div>
+            
+            <div class="footer_category">
+                <a href="{% url 'product' %}"><div class="footer_Product">Product</div></a>
+                <a href="{% url 'feed' %}"><div class="footer_Fetures">Fetures</div></a>
+                <a href=""><div class="footer_Pricing">Pricing</div></a>
+                <a href=""><div class="footer_Resources">Resources</div></a>
+                <a href=""><div class="footer_Career">Career</div></a>
+                <a href=""><div class="footer_Help">Help</div></a>
+                <a href=""><div class="footer_Privacy">Privacy</div></a>
+            </div>
+        </div>
+        <div class="footerline"></div>
+        <div class="rights">&#169;2021 Flex.All rights reserved</div>
+    </div>
+    
+</body>
+</html>

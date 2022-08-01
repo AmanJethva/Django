@@ -1,0 +1,199 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel ="stylesheet" href ="{% static 'detail.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Serif:wght@400;700&family=Oswald:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logoname"><h2>Flex</h2></div>
+            <div class="logo"> 
+                <img src="{% static 'images/Vector.png' %}" alt="">
+            </div>
+            <div class="logo1">
+                <img src="{% static 'images/Vector (1).png' %}" alt="">
+            </div>
+            <div class="logo2">
+                <img src="{% static 'images/Vector (2).png' %}" alt="">
+            </div>
+            
+            <div class="category">
+                <a href="{% url 'product' %}"><div class="Product">Product</div></a>
+                <a href="{% url 'feed' %}"><div class="Product">Fetures</div></a>
+                <a href=""><div class="Product">Pricing</div></a>
+                <a href=""><div class="Product">Resources</div></a>
+                <input class="search" placeholder="search">
+                
+                </div>
+                <a href="{% url 'registration' %}"><div class="login">Login</div></a>
+                <a href="{% url 'registration' %}"><div class="btn1"><div class="btn_text">Sign Up</div></div></a>
+            </div>
+    </div>
+
+    <div class="founder">
+        <img src="{% static 'images/face.png' %}">
+        <div class="founder_name">Macauley Herring</div>
+        <div class="founder_stage">CEO & Founder</div>
+        <div class="company_details">With a single point of view, Flex<br>integrates customer data and <br> marketing tools in one flexible
+        cloud <br>platform that lets you get business results wherever they show up. Flex is <br> the only saas business on one <br> 
+        platform, seamlessly across all digital <br> channles</div>
+        <div class="email_logo"><img src="{% static 'images/Ellipse 6.png' %}">
+            <div class="email_name">Email</div>
+            <div class="email_adress">contact@flex.co</div>
+        </div>
+        <div class="phone_logo">
+            <div class="phone_name">Phone</div>
+            <div class="phone_number">+7-843-672-431</div>
+        </div>
+        <div class="office_logo">
+            <div class="office_name">Office</div>
+            <div class="office_adress">1686, Geraldine Lane<br>New York,NY 1003</div>
+        </div>
+        <div class="socialmedia">
+            <div class="socialmedia_name">Socials</div>
+        </div>
+    </div>
+    <div class="product1_container"><a href="">
+        <img src="{% static 'images/product1.png' %}">
+        <div class="product_details1">Vintage type writer to post<br>awesome stories about UI<br> design and web dev.</div>
+        <div class="product_price1">$49.50</div>
+        <div class="product_text1">Eligible for shipping to Mars or <br> somewhere else</div>
+        <div class="watch_container">
+            <div class="watch_image">
+            <img src="{% static 'images/watchlater.png' %}">
+            </div>
+            <div class="watch_text">Watch</div>
+        </div></a>
+    </div>
+    <div class="product2_container"><a href="">
+        <img src="{% static 'images/Image.png' %}">
+        <div class="product_details1">Vintage type writer to post<br>awesome stories about UI<br> design and web dev.</div>
+        <div class="product_price1">$49.50</div>
+        <div class="product_text1">Eligible for shipping to Mars or <br> somewhere else</div>
+        <div class="watch_container">
+            <div class="watch_image">
+            <img src="{% static 'images/watchlater.png' %}">
+            </div>
+            <div class="watch_text">Watch</div>
+        </div></a>
+    </div>
+    <div class="product3_container"><a href="">
+        <img src="{% static 'images/product3.png' %}">
+        <div class="product_details1">Vintage type writer to post<br>awesome stories about UI<br> design and web dev.</div>
+        <div class="product_price1">$49.50</div>
+        <div class="product_text1">Eligible for shipping to Mars or <br> somewhere else</div>
+        <div class="watch_container">
+            <div class="watch_image">
+            <img src="{% static 'images/watchlater.png' %}">
+            </div>
+            <div class="watch_text">Watch</div>
+        </div></a>
+    </div>
+    <div class="product4_container"><a href="">
+        <img src="{% static 'images/product4.png' %}">
+        <div class="product_details1">Vintage type writer to post<br>awesome stories about UI<br> design and web dev.</div>
+        <div class="product_price1">$49.50</div>
+        <div class="product_text1">Eligible for shipping to Mars or <br> somewhere else</div>
+        <div class="watch_container">
+            <div class="watch_image">
+            <img src="{% static 'images/watchlater.png' %}">
+            </div>
+            <div class="watch_text">Watch</div>
+        </div></a>
+    </div>
+
+    <div class="footer">
+
+        <div class="numbers">
+            <div class="number_text">Number</div>
+        </div>
+        <div class="company_stats">Company Stats</div>
+        <div class="project_created">235.000</div>
+        <div class="project_created-text">Projects Completed</div>
+
+        <div class="hours_save">+50.000</div>
+        <div class="hours_save_text">Hours Saved Annually</div>
+        
+        <div class="apr">$10m</div>
+        <div class="apr_text">APR</div>
+
+        <div class="unicorn_user">3.500</div>
+        <div class="unicorn_user_text">Unicorns Users</div>
+
+        <div class="company_graph_container">
+            <div class="city_population">City Population<div class="estimated">Estimated by borough</div></div>
+            <div class="line1">
+                <div class="graphline1"><img src="{% static 'images/Queens.png' %}"></div>
+                <div class="line1text">4,000k</div>
+            </div>
+            <div class="line2">
+                <div class="graphline2"><img src="{% static 'images/Brooklyn.png' %}"></div>
+                <div class="line1text">3,000</div>
+            </div>
+            <div class="line3">
+                <div class="graphline3"><img src="{% static 'images/Manhattan.png' %}"></div>
+                <div class="line1text">2,000</div>
+            </div>
+            <div class="line4">
+                <div class="graphline4"><img src="{% static 'images/Bronx.png' %}"></div>
+                <div class="line1text">1,000</div>
+            </div>
+            <div class="line5">
+                <div class="graphline5"><img src="{% static 'images/Staten Island.png' %}"></div>
+                <div class="line1text">0</div>
+            </div>
+            <div class="may">May 
+                <div class="june">June</div><div class="july">July</div><div class="august">Aug</div><div class="september">Sep</div>
+            </div> 
+            <div class="staten">
+                <div class="statentext">Staten Island</div>
+            </div>
+            <div class="bronx">
+                <div class="bronxtext">Bronx</div>
+            </div>
+            <div class="manhattan">
+                <div class="manhattntext">Manhattan</div>
+            </div>
+            <div class="queens">
+                <div class="queentext">Queens</div>
+            </div>
+            <div class="brooklyn">
+                <div class="brooklyntext">Brooklyn</div>
+            </div>
+        </div>
+        
+
+        <div class="footer_logoname"><h2>Flex</h2></div>
+            <div class="footer_logo"> 
+                <img src="{% static 'images/Vector.png' %}" alt="">
+            </div>
+            <div class="footer_logo1">
+                <img src="{% static 'images/Vector (1).png' %}" alt="">
+            </div>
+            <div class="footer_logo2">
+                <img src="{% static 'images/Vector (2).png' %}" alt="">
+            </div>
+            
+            <div class="footer_category">
+                <a href="{% url 'product' %}"><div class="footer_Product">Product</div></a>
+                <a href="{% url 'feed' %}"><div class="footer_Fetures">Fetures</div></a>
+                <a href=""><div class="footer_Pricing">Pricing</div></a>
+                <a href=""><div class="footer_Resources">Resources</div></a>
+                <a href=""><div class="footer_Career">Career</div></a>
+                <a href=""><div class="footer_Help">Help</div></a>
+                <a href=""><div class="footer_Privacy">Privacy</div></a>
+            </div>
+        </div>
+        <div class="footerline"></div>
+        <div class="rights">&#169;2021 Flex.All rights reserved</div>
+    </div>
+</body>
+</html>
